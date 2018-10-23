@@ -111,7 +111,7 @@ class mxCellState extends mxRectangle
 	 * cell - <mxCell> that this state represents.
 	 * style - Array of key, value pairs that constitute the style.
 	 */
-	function mxCellState($view = null, $cell = null, $style = null)
+	function __construct($view = null, $cell = null, $style = null)
 	{
 		$this->view = $view;
 		$this->cell = $cell;

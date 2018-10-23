@@ -17,9 +17,9 @@ class mxGraphViewHtmlReader extends mxGraphViewImageReader
 	 *
 	 * Constructs a new HTML graph view reader.
 	 */
-	function mxGraphViewHtmlReader()
+	function __construct()
 	{
-		parent::mxGraphViewImageReader();
+		parent::__construct();
 	}
 
 	/**

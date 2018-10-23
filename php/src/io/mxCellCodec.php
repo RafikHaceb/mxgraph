@@ -43,9 +43,9 @@ class mxCellCodec extends mxObjectCodec
 	 * references.
 	 * mapping - Optional mapping from field- to attributenames.
 	 */
-	function mxCellCodec($template)
+	function __construct($template)
 	{
-		parent::mxObjectCodec($template, array("children", "edges", "states",
+		parent::__construct($template, array("children", "edges", "states",
 			"overlay", "mxTransient"), array("parent",
 			"source", "target"));
 	}

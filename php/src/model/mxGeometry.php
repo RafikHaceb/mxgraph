@@ -80,9 +80,9 @@ class mxGeometry extends mxRectangle
 	 * Constructs a new object to describe the size and location
 	 * of a vertex or the control points of an edge.
 	 */
-	function mxGeometry($x=0, $y=0, $width=0, $height=0)
+	function __construct($x=0, $y=0, $width=0, $height=0)
 	{
-		parent::mxRectangle($x, $y, $width, $height);
+		parent::__construct($x, $y, $width, $height);
 	}
 
 	/**
@@ -172,7 +172,7 @@ class mxGeometry extends mxRectangle
 			
 			for ($i = 0; $i < $count; $i++)
 			{
-				$pt = $this->points[i];
+				$pt = $this->points[$i];
 				
 				$pt->x += $dx;
 				$pt->y += $dy;

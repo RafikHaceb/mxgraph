@@ -319,13 +319,13 @@ class mxUtils
 	{
 		$cx = ($cx != null) ? $cx : new mxPoint();
 		
-		$x = $pt->x - $c->x;
-		$y = $pt->y - $c->y;
+		$x = $pt->x - $cx->x;
+		$y = $pt->y - $cx->y;
 
 		$x1 = $x * $cos - $y * $sin;
 		$y1 = $y * $cos + $x * $sin;
 
-		return new mxPoint($x1 + $c->x, $y1 + $c->y);
+		return new mxPoint($x1 + $cx->x, $y1 + $cx->y);
 	}
 
 	/**

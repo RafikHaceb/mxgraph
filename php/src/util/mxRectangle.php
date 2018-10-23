@@ -29,9 +29,9 @@ class mxRectangle extends mxPoint
 	 * Constructs a new rectangle for the optional parameters. If no parameters
 	 * are given then the respective default values are used.
 	 */
-	function mxRectangle($x = 0, $y = 0, $width = 0, $height = 0)
+	function __construct($x = 0, $y = 0, $width = 0, $height = 0)
 	{
-		parent::mxPoint($x, $y);
+		parent::__construct($x, $y);
 		
 	 	$this->width = $width;
 		$this->height = $height;
@@ -46,8 +46,8 @@ class mxRectangle extends mxPoint
 	{
 	    $this->x = $x;
 	    $this->y = $y;
-	    $this->width = $w;
-	    $this->height = $h;
+	    $this->width = $width;
+	    $this->height = $height;
 	}
 	
 	/**

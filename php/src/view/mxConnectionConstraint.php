@@ -38,7 +38,7 @@ class mxConnectionConstraint
 	 * perimeter - Optional boolean that specifies if the fixed point should be
 	 * projected onto the perimeter of the terminal. Default is true.
 	 */
-	function mxConnectionConstraint($point = null, $perimeter = true)
+	function __construct($point = null, $perimeter = true)
 	{
 		$this->point = $point;
 		$this->perimeter = $perimeter;

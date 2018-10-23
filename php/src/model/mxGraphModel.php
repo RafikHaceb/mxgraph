@@ -66,7 +66,7 @@ class mxGraphModel extends mxEventSource
 	 *
 	 * Constructs a new graph model using the specified root cell.
 	 */
-	function mxGraphModel($root = null)
+	function __construct($root = null)
 	{
 	 	if (isset($root))
 	 	{
@@ -1157,7 +1157,7 @@ class mxGraphModel extends mxEventSource
 		}
 		$this->endUpdate();
 	 	
-	 	return $isVisible;
+	 	return $this->isVisible($cell);
 	}
 
 	/**
@@ -1185,15 +1185,15 @@ class mxGraphModel extends mxEventSource
 			// cells in the target model
 			foreach ($mapping as $key => $cell)
 			{
-				$terminal = $this->getTerminal($cell, $true);
+				$terminal = $this->getTerminal($cell, true);
 				
 				if (isset($terminal))
 				{
 					$terminal = $mapping[mxCellPath::create($terminal)];
-					$this->setTerminal($cell, $terminal, $true);
+					$this->setTerminal($cell, $terminal, true);
 				}
 				
-				$terminal = $this->getTerminal(cell, false);
+				$terminal = $this->getTerminal($cell, false);
 				
 				if (isset($terminal))
 				{

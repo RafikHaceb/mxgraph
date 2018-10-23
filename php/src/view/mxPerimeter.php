@@ -357,7 +357,7 @@ class mxTrianglePerimeter implements mxPerimeterFunction
 		
 		if ($direction == mxConstants::$DIRECTION_NORTH)
 		{
-			$start = end;
+			$start = $end;
 			$corner = new mxPoint($cx, $y);
 			$end = new mxPoint($x + $w, $y + $h);
 		}

@@ -121,7 +121,7 @@ class mxCell
 	 * geometry - Optional <mxGeometry> that specifies the geometry.
 	 * style - Optional formatted string that defines the style.
 	 */
-	function mxCell($value = null, $geometry = null, $style = null)
+	function __construct($value = null, $geometry = null, $style = null)
 	{
 		$this->setValue($value);
 		$this->setGeometry($geometry);

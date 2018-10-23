@@ -67,7 +67,7 @@ class mxGraphView extends mxEventSource
 	 * 
 	 * Constructs a new view for the specified <mxGraph>.
 	 */
-	function mxGraphView($graph)
+	function __construct($graph)
 	{
 		$this->EMPTY_POINT = new mxPoint();
 		$this->graph = $graph;
@@ -628,10 +628,10 @@ class mxGraphView extends mxEventSource
         {
             if (mxUtils::getValue($style, mxConstants::$STYLE_IMAGE) != null)
             {
-                $w = mxUtils::$getValue($style,
+                $w = mxUtils::getValue($style,
                         mxConstants::$STYLE_IMAGE_WIDTH,
                         mxConstants::$DEFAULT_IMAGESIZE) * $this->scale;
-                $h = mxUtils::$getValue($style,
+                $h = mxUtils::getValue($style,
                         mxConstants::$STYLE_IMAGE_HEIGHT,
                         mxConstants::$DEFAULT_IMAGESIZE) * $this->scale;
 
@@ -640,7 +640,7 @@ class mxGraphView extends mxEventSource
 
                 $imgAlign = mxUtils::getValue($style, mxConstants::$STYLE_IMAGE_ALIGN,
                                 mxConstants::$ALIGN_CENTER);
-                $imgValign = mxUtils::getValue(style,
+                $imgValign = mxUtils::getValue($style,
                         mxConstants::$STYLE_IMAGE_VERTICAL_ALIGN,
                         mxConstants::$ALIGN_MIDDLE);
 
@@ -747,7 +747,7 @@ class mxGraphView extends mxEventSource
 		{
 			if ($n > 0)
 			{
-				$state->absolutePoints[0] = $pt;
+				$edge->absolutePoints[0] = $pt;
 			}
 			else
 			{

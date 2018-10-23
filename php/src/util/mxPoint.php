@@ -29,7 +29,7 @@ class mxPoint
 	 * Constructs a new point for the optional x and y coordinates. If no
 	 * coordinates are given, then the default values for <x> and <y> are used.
 	 */
-	function mxPoint($x = 0, $y = 0)
+	function __construct($x = 0, $y = 0)
 	{
 	 	$this->x = $x;
 		$this->y = $y;

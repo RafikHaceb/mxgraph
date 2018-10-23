@@ -22,9 +22,9 @@ class mxHtmlCanvas extends mxGdCanvas
 	 * Constructs a new GD canvas. Use a HTML color definition for
 	 * the optional background parameter, eg. white or #FFFFFF.
 	 */
-	function mxHtmlCanvas($scale=1, $basePath = "")
+	function __construct($scale=1, $basePath = "")
 	{
-		parent::mxGdCanvas(null, null, $scale, null, $basePath);
+		parent::__construct(null, null, $scale, null, $basePath);
 		$this->html = "";
 	}
 

@@ -30,7 +30,7 @@ class mxStylesheet
 	 * 
 	 * Constructs a new stylesheet and assigns default styles.
 	 */
-	function mxStylesheet()
+	function __construct()
 	{
 	 	$this->putDefaultVertexStyle($this->createDefaultVertexStyle());
 	 	$this->putDefaultEdgeStyle($this->createDefaultEdgeStyle());

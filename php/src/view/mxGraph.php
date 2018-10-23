@@ -68,7 +68,7 @@ class mxGraph
 	 * Constructs a new graph model using the specified
 	 * root cell.
 	 */
-	function mxGraph($model = null, $stylesheet = null)
+	function __construct($model = null, $stylesheet = null)
 	{
 		$this->model = ($model != null) ? $model : new mxGraphModel();
 		$this->stylesheet = ($stylesheet != null) ? $stylesheet : $this->createStylesheet();
@@ -787,12 +787,12 @@ class mxGraph
 							if ($source !== $target)
 							{
                                 if ($source === $cell && (!$isolate ||
-                                	$this->model->getParent(target) == $parent))
+                                	$this->model->getParent($target) == $parent))
                                 {
                                     $fanOut++;
                                 }
                                 else if (!$isolate ||
-                                	$this->model->getParent(source) == $parent)
+                                	$this->model->getParent($source) == $parent)
                                 {
                                     $fanIn++;
                                 }

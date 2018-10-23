@@ -73,7 +73,7 @@ class mxObjectCodec
 	 * references.
 	 * mapping - Optional mapping from field- to attributenames.
 	 */
-	function mxObjectCodec($template, $exclude = array(),
+	function __construct($template, $exclude = array(),
 		$idrefs = array(), $mapping = array())
 	{
 		$this->template = $template;

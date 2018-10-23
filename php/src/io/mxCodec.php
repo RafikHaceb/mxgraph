@@ -45,7 +45,7 @@ class mxCodec
 	 *
 	 * Constructs a new HTML graph view reader.
 	 */
-	function mxCodec($document=null)
+	function __construct($document=null)
 	{
 		if ($document == null)
 		{

@@ -46,7 +46,7 @@ class mxImageBundle
 	 *
 	 * Constructs a new image bundle.
 	 */
-	function mxImageBundle() { }
+	function __construct() { }
 	
 	/**
 	 * Function: getImages

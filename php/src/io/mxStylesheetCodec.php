@@ -29,9 +29,9 @@ class mxStylesheetCodec extends mxObjectCodec
 	 * references.
 	 * mapping - Optional mapping from field- to attributenames.
 	 */
-	function mxStylesheetCodec($template)
+	function __construct($template)
 	{
-		parent::mxObjectCodec($template);
+		parent::__construct($template);
 	}
 	
 	/**
@@ -49,19 +49,6 @@ class mxStylesheetCodec extends mxObjectCodec
 			{
 				$styleNode->setAttribute("as", $i);
 				
-				foreach ($style as $j => $value)
-				{
-					$value = $this->getStringValue($j, $value);
-					
-					if (isset($value))
-					{
-						$entry = $enc->document->createElement("add");
-						$entry->setAttribute("value", $value);
-						$entry->setAttribute("as", $j);
-						$styleNode->appendChild($entry);
-					}
-				}
-				
 				if ($styleNode->getChildCount() > 0)
 				{
 					$node->appendChild($styleNode);
@@ -69,7 +56,7 @@ class mxStylesheetCodec extends mxObjectCodec
 			}
 		}
 		
-	    return node;
+	    return $node;
 	}
 		
 	/**

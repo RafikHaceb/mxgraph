@@ -75,7 +75,7 @@ class mxGdCanvas
 	 * The buffered <image> is only created if the given
 	 * width and height are greater than 0.
 	 */
-	function mxGdCanvas($width = 0, $height = 0, $scale = 1,
+	function __construct($width = 0, $height = 0, $scale = 1,
 		$background = null, $imageBasePath = "")
 	{
 	 	$this->enableTtf = mxConstants::$TTF_ENABLED;
@@ -969,10 +969,6 @@ class mxGdCanvas
 	
 			if ($bg != null || $border != null)
 			{			
-				$bounds->width += 2;
-				$bounds->x -= 2;
-				$bounds->y -= 1;
-	
 				$this->drawRect($x, $y, $w, $h, $bg, $border, false);
 			}
 

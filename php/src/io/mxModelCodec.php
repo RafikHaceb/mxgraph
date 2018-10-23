@@ -29,9 +29,9 @@ class mxModelCodec extends mxObjectCodec
 	 * references.
 	 * mapping - Optional mapping from field- to attributenames.
 	 */
-	function mxModelCodec($template)
+	function __construct($template)
 	{
-		parent::mxObjectCodec($template);
+		parent::__construct($template);
 	}
 	
 	/**

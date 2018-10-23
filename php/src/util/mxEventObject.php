@@ -38,7 +38,7 @@ class mxEventObject
 	 * properties are specified using a sequence of keys and values, eg.
 	 * new mxEventObject($name, $key1, $value1, $key2, $value2, .., $keyN, $valueN)
 	 */
-	function mxEventObject($name)
+	function __construct($name)
 	{
 		$this->name = $name;
 		$this->properties = array();

@@ -61,7 +61,7 @@ class mxGraphViewImageReader
 	 *
 	 * Constructs a new image graph view reader.
 	 */
-	function mxGraphViewImageReader($background = null, $border = 0)
+	function __construct($background = null, $border = 0)
 	{
 		$this->parser = xml_parser_create();
 		
