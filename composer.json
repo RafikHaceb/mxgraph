@@ -1,0 +1,7 @@
+{
+  "name": "rafikhaceb/mxgraph",
+  "description": "Composer ready for mxgraph (https://jgraph.github.io/mxgraph/)",
+  "require": {
+    "php": "^5.3.3 || ^7.0"
+  }
+}
